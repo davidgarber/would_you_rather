@@ -1,14 +1,13 @@
-<h1>Questions</h1>
-
-
+<div class="row">
+<h1 class="headline">Would Ya' Rather</h1>
+<button class="links left-link"><%= link_to 'New Question', new_question_path, id: "new_link", remote: true %>
+</button>
 <% @questions.each  do |question| %>
 
 <% end %>
 
-
-<button class="links left-link"><%= link_to 'New Question', new_question_path, id: "new_link", remote: true %>
-</button>
-
-<ul id="questions">
+<div class="col-lg-12" id="questions">
 <%= render @questions %>
-</ul>
+</div>
+
+</row>

@@ -15,3 +15,42 @@
 
 // Whatever application styles you have go last
 // @import "base";
+
+.headline {
+  font-size: 58px;
+  text-align: center;
+}
+
+.question-title {
+  font-size: 30px;
+  text-align:center;
+  background-color: #4E5D6C;
+  border-radius: 4px 4px 0 0;
+
+}
+h2.question-title {
+  margin-bottom: 0;
+}
+
+.a-display {
+  font-size: 24px;
+  text-align:center;
+  background-color: #4E5D6C;
+  border-radius: 0 0 4px 4px;
+}
+
+img.responsive.center-block {
+  padding-top: 20px;
+}
+
+button.btn-default {
+  background-color:  rgb(235, 235, 235);
+  margin: 20px 3px 0 3px;
+}
+
+button.btn-default:hover {
+background-color: rgb(192, 192, 192);
+}
+.row {
+  text-align: center;
+}
