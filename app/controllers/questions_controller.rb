@@ -17,14 +17,13 @@ class QuestionsController < ApplicationController
     @question = Question.new(question_params)
     if @question.save
       flash[:notice] = "Question saved!"
+      respond_to do |format|
+        format.html {  redirect_to questions_path }
+        format.js
+      end
     else
-      flash[:error] = "errors!"
-      redirect_to new_question_path
-    end
-
-    respond_to do |format|
-      format.html {  redirect_to questions_path }
-      format.js
+      flash[:alert] = "errors!"
+      render :new
     end
   end
 
