@@ -16,5 +16,5 @@
     <button class="btn-default"><%= link_to "Edit Question", edit_question_path(question),  remote: true %></button>
   <button class="btn-default"><%= link_to "Delete Question", question_path(question),
                               :data => {:confirm => "Confirm?",
-                              :method => "delete"} %></button>
+                              :method => "delete"}, remote: true %></button>
 </div>

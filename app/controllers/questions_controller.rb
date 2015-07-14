@@ -15,15 +15,14 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.new(question_params)
-    if @question.save
-      flash[:notice] = "Question saved!"
-      respond_to do |format|
+    respond_to do |format|
+      if @question.save
+        flash[:notice] = "Question saved!"
         format.html {  redirect_to questions_path }
         format.js
+      else
+        format.js { render 'fail'}
       end
-    else
-      flash[:alert] = "errors!"
-      render :new
     end
   end
 
@@ -39,10 +38,8 @@ class QuestionsController < ApplicationController
         format.js
       end
     else
-      redirect_to  edit_question_path(@question)
+    render :edit
     end
-
-
   end
 
   def destroy
