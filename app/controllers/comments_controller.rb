@@ -18,11 +18,16 @@ class CommentsController < ApplicationController
 	  @question = Question.find(params[:question_id])
 	  @comment = @question.comments.new(comment_params)
 	  if @comment.save
-	    flash[:notice] = "Project added!!"
-	    redirect_to question_path(@comment.question)
+	     flash[:notice] = "Project added!!"
+
+  	   respond_to do |format|
+        format.html {  redirect_to question_path(@comment.question)}
+        format.js
+      end
 	  else
 	    render :new
 	  end
+
 	end
 
 	def edit

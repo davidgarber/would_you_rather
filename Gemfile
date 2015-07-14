@@ -16,6 +16,7 @@ gem 'bootstrap_form'
 gem 'devise'
 gem 'paperclip'
 gem 'rails_12factor', group: :production
+gem 'acts_as_votable'
 
 
 
